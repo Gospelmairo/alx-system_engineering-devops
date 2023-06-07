@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -m
+ls -1A | awk '{if ($0 == "." || $0 == "..") {printf $0", ";} else if (substr($0, 1, 1) ~ /[[:digit:][:alpha:]]/) {if (substr($0, length($0)) == "/") {printf $0", ";} else {printf $0", ";}}}' && echo
