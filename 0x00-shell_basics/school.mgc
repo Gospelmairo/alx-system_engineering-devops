@@ -1,2 +1,2 @@
 #!/bin/bash
-file -i ./* | awk -F
+file -i ./* | awk -F: '{print $1": "$2}'
