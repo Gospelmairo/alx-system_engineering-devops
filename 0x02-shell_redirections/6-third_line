@@ -1,10 +1,2 @@
 #!/bin/bash
-filename="iacta"
-line_number=3
-
-if [ -f "$filename" ]; then
-    line=$(awk "NR==$line_number" "$filename")
-    echo "$line"
-else
-    echo "File '$filename' does not exist."
-fi
+head -n 3 iacta | tail -n 1
