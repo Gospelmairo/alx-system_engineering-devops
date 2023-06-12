@@ -1,1 +1,2 @@
-Replace all characters  and  from input to  and .
+#!/bin/bash
+sed 's/A/Z/g; s/c/e/g'
