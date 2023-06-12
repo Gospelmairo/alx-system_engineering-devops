@@ -1,2 +1,2 @@
 #1/bin/bash
-tail -n +2 | sort | cut -f1 | uniq -c | sort -g -r | head -11 | tr -s " " | cut -d" " -f3
+awk 'NR>1 {hosts[$1]++} END {for (host in hosts) print host}' | sort | uniq -c | sort -nr | awk '{print $2}' | head -n 11
